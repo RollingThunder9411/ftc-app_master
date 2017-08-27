@@ -64,7 +64,7 @@ public class RegisterTeamOpModes
 {
     @OpModeRegistrar
     public static void registerMyOpModes(OpModeManager manager) {
-        manager.register("TeleOpOld", TeleOpMainOld.class);
+        manager.register("Semi-Autonomous Test", SemiAutonomousTest.class);
         manager.register("TeleOp", TeleOpMain.class);
     }
 }

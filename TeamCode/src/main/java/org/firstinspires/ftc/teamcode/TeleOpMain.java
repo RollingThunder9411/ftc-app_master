@@ -17,10 +17,10 @@ import org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity
 
 /**
  * Created by Rolling Thunder on 8/19/2017.
- * Last updated on 8/19/2017.
+ * Last updated on 8/27/2017.
  */
 
-@TeleOp(name="TeleOp", group="TeleOp")
+@TeleOp(name="TeleOpMain", group="TeleOp")
 @Disabled
 public class TeleOpMain extends OpMode {
     // ***System variables***
@@ -37,11 +37,12 @@ public class TeleOpMain extends OpMode {
     // Initializes booleans for button releases
     boolean releaseAButton, releaseBButton;
     public void init() {
-        // Defines motor
+        // Defines motors from config file
         motorFrontLeft = this.hardwareMap.dcMotor.get("motorFrontLeft");
         motorFrontRight = this.hardwareMap.dcMotor.get("motorFrontRight");
         motorBackLeft = this.hardwareMap.dcMotor.get("motorBackLeft");
         motorBackRight = this.hardwareMap.dcMotor.get("motorBackRight");
+        // Reverses motors mounted in the opposite direction
         motorFrontLeft.setDirection(DcMotor.Direction.REVERSE);
         motorBackLeft.setDirection(DcMotor.Direction.REVERSE);
     }
